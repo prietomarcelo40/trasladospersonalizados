@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <img src="{{ url_for('static', filename='img/corsa.jpeg') }}" 
+         class="rounded-circle shadow mb-4" 
+         alt="Foto de Marce" 
+         width="200" height="200">
+    <h1>TRASLADOS PERSONALIZADOS.</h1>
+    <p class="lead">Seguridad, confianza, celeridad y puntualidad nos caracterizan.</p>
+</div>
+{% endblock %}

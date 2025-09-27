@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Servicios{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h1 class="mb-3">Nuestros Servicios</h1>
+        <p class="lead">Te ofrecemos traslados seguros, rápidos y personalizados según tus necesidades.</p>
+    </div>
+
+    <div class="row g-4">
+        <!-- Servicio 1 -->
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100 servicio-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-car-front-fill display-4 text-primary mb-3"></i>
+                    <h5 class="card-title">Traslados Urbanos</h5>
+                    <p class="card-text">Viajes dentro de la ciudad con puntualidad, comodidad y confianza.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Servicio 2 -->
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100 servicio-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-airplane display-4 text-primary mb-3"></i>
+                    <h5 class="card-title">Traslados Aeropuerto</h5>
+                    <p class="card-text">Llegá a tiempo a tus vuelos, viajes a Aeroparque y Ezeiza. </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Servicio 3 -->
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100 servicio-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-people-fill display-4 text-primary mb-3"></i>
+                    <h5 class="card-title">Servicios Corporativos</h5>
+                    <p class="card-text">Soluciones de movilidad confiables para empresas y ejecutivos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
