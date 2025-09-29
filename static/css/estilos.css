@@ -5,7 +5,7 @@ body {
 }
 
 h1 {
-    color: #003366;
+    color: #003366; /* color azul oscuro */
 }
 
 .lead {
@@ -49,4 +49,31 @@ h1 {
 
 .whatsapp-text {
     font-weight: bold;
+}
+
+/* --- Estilos para los enlaces de navegación --- */
+.nav-link {
+    color: white; /* letra blanca */
+    font-weight: bold; /* negrita */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px; /* para que el fondo sea redondeado */
+}
+
+.nav-link:hover {
+    color: #0066cc; /* cambio de color al hover */
+    text-decoration: underline;
+    transform: scale(1.1);
+    background-color: #e6f2ff; /* fondo suave */
+}
+
+/* --- Modificación para los textos de las cards --- */
+.card-text {
+    color: #0066cc; /* mismo color que .lead */
+}
+
+/* --- Modificación para los títulos de las cards --- */
+.card-title {
+    color: #003366; /* mismo color que el h1 */
 }
