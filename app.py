@@ -10,5 +10,9 @@ def home():
 def servicios():
     return render_template('servicios.html')
 
+@app.route('/desarrollador')
+def desarrollador():
+    return render_template('desarrollador.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

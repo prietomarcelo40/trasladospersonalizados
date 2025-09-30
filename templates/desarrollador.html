@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Desarrollador{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <img src="{{ url_for('static', filename='img/marce.jpg') }}" 
+         class="rounded-circle shadow mb-4" 
+         alt="Foto del desarrollador" 
+         width="200" height="200">
+    <h1>Marcelo Prieto</h1>
+    <p class="lead">Diseñador y desarrollador de esta página web.</p>
+    <p>Contacto: <a href="https://webmop.onrender.com">https://webmop.onrender.com</a></p>
+</div>
+{% endblock %}
