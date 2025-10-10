@@ -2,6 +2,9 @@
 
 {% block title %}Desarrollador{% endblock %}
 
+{# ESTA LÍNEA HACE QUE EL BOTÓN FLOTANTE DESAPAREZCA SOLO DE ESTA PÁGINA #}
+{% block hide_whatsapp %}{% endblock %}
+
 {% block content %}
 <div class="text-center">
     <img src="{{ url_for('static', filename='img/marce.jpg') }}" 

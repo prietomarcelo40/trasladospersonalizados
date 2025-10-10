@@ -1,3 +1,7 @@
+/* ==================================== */
+/* 1. ESTILOS BASE Y TIPOGRAFÍA         */
+/* ==================================== */
+
 body {
     background-color: #f0f8ff;
     color: #000033;
@@ -5,12 +9,16 @@ body {
 }
 
 h1 {
-    color: #003366; /* color azul oscuro */
+    color: #003366;
 }
 
 .lead {
     color: #0066cc;
 }
+
+/* ==================================== */
+/* 2. COMPONENTES Y UTILIDADES          */
+/* ==================================== */
 
 .text-center {
     background-color: #e6f2ff;
@@ -19,23 +27,58 @@ h1 {
     box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
 }
 
-/* Botón flotante de WhatsApp */
+/* --- Estilos para los enlaces de navegación --- */
+.nav-link {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    color: #0066cc;
+    text-decoration: underline;
+    transform: scale(1.1);
+    background-color: #e6f2ff;
+}
+
+/* --- Estilos de Cards --- */
+.card-title {
+    color: #003366;
+}
+
+.card-text {
+    color: #0066cc;
+}
+
+/* ==================================== */
+/* 3. BOTÓN FLOTANTE DE WHATSAPP        */
+/* ==================================== */
+
 .whatsapp-float {
+    /* Layout y Posición */
     position: fixed;
     bottom: 20px;
     right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    /* Apariencia */
     background-color: #25D366;
     color: white;
     border-radius: 30px;
     text-align: center;
     font-size: 18px;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    gap: 8px;
     padding: 10px 15px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
     text-decoration: none;
+    
+    /* Transiciones */
+    transition: background-color 0.3s ease;
 }
 
 .whatsapp-float:hover {
@@ -51,37 +94,14 @@ h1 {
     font-weight: bold;
 }
 
-/* --- Estilos para los enlaces de navegación --- */
-.nav-link {
-    color: white; /* letra blanca */
-    font-weight: bold; /* negrita */
-    text-decoration: none;
-    transition: all 0.3s ease;
-    padding: 5px 10px;
-    border-radius: 5px; /* para que el fondo sea redondeado */
-}
+/* ==================================== */
+/* 4. ANIMACIONES PERSONALIZADAS        */
+/* ==================================== */
 
-.nav-link:hover {
-    color: #0066cc; /* cambio de color al hover */
-    text-decoration: underline;
-    transform: scale(1.1);
-    background-color: #e6f2ff; /* fondo suave */
-}
-
-/* --- Modificación para los textos de las cards --- */
-.card-text {
-    color: #0066cc; /* mismo color que .lead */
-}
-
-/* --- Modificación para los títulos de las cards --- */
-.card-title {
-    color: #003366; /* mismo color que el h1 */
-}
-
-/* --- Nueva clase para la frase animada del inicio --- */
+/* --- Frase animada del inicio (.animated-text) --- */
 .animated-text {
     font-weight: bold;
-    color: #ff6600; /* color destacado */
+    color: #ff6600;
     font-size: 1.5rem;
     opacity: 0;
     animation: fadeBounce 2s ease forwards;
@@ -93,7 +113,7 @@ h1 {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* --- ANIMACIÓN MÁS EVIDENTE PARA EL BADGE "Tarifa Fija!!!" (clase .animated-badge) --- */
+/* --- Badge "Tarifa Fija" (.animated-badge) --- */
 .animated-badge {
     animation: pulseMoreEvident 1.5s ease-in-out infinite, bounceFloat 3s ease-in-out infinite alternate;
     transform-origin: center;
@@ -102,11 +122,11 @@ h1 {
 @keyframes pulseMoreEvident {
     0% {
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); /* Sombra suave de alerta/amarillo */
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7);
     }
     50% {
-        transform: scale(1.1); /* Escala más grande */
-        box-shadow: 0 0 0 15px rgba(255, 193, 7, 0); /* Sombra más expandida */
+        transform: scale(1.1);
+        box-shadow: 0 0 0 15px rgba(255, 193, 7, 0);
     }
     100% {
         transform: scale(1);
@@ -116,9 +136,17 @@ h1 {
 
 @keyframes bounceFloat {
     0% { transform: translateY(0); }
-    25% { transform: translateY(-8px); } /* Sube más alto */
+    25% { transform: translateY(-8px); }
     50% { transform: translateY(0); }
     75% { transform: translateY(-4px); }
     100% { transform: translateY(0); }
 }
-/* --- FIN DE LA ANIMACIÓN MÁS EVIDENTE --- */
+
+/* ==================================== */
+/* 5. REGLAS ESPECÍFICAS DE PÁGINA      */
+/* ==================================== */
+
+/* OCULTA EL BOTÓN DE WHATSAPP SOLO EN LA PÁGINA DESARROLLADOR */
+.no-whatsapp .whatsapp-float {
+    display: none !important;
+}
