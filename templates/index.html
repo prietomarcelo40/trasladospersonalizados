@@ -6,12 +6,20 @@
 <div class="text-center">
     <img src="{{ url_for('static', filename='img/corsa.jpeg') }}" 
          class="rounded-circle shadow mb-4" 
-         alt="Foto de Marce" 
-         width="200" height="200">
-    <h1>TRASLADOS PERSONALIZADOS.</h1>
+         alt="Logo de la marca" 
+         width="220" height="220">
+
+    <h1 class="mt-3">Traslados Personalizados</h1>
     <p class="lead">Seguridad, confianza, celeridad y puntualidad nos caracterizan.</p>
-    
-    <!-- Nueva frase destacada con animación -->
-    <p class="lead mt-4 animated-text">¡¡¡Compartí mi página y obtené beneficios!!!</p>
+
+    <p class="lead mt-4 animated-text">¡Compartí mi página y obtené beneficios!</p>
+
+    <div style="margin-top: 30px;">
+        <a href="https://wa.me/5491133810134?text=¡Hola!%20Quiero%20consultar%20por%20un%20traslado."
+           class="btn-principal"
+           target="_blank">
+           <i class="bi bi-whatsapp"></i> Reservar ahora
+        </a>
+    </div>
 </div>
 {% endblock %}
